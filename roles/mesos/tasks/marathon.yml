@@ -1,0 +1,5 @@
+---
+- name: install marathon
+  apt: name=marathon state=present
+- name: start marathon
+  service: name=marathon state=started enabled=yes

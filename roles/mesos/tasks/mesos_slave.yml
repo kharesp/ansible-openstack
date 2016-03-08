@@ -1,0 +1,15 @@
+---
+- name: stop zookeeper service
+  service: name=zookeeper state=stopped enabled=no
+
+- name: overwrite /etc/mesos/zk file
+  template: src=masters.j2 dest=/etc/mesos/zk
+
+- name: stop mesos-master service
+  service: name=mesos-master state=stopped enabled=no
+
+- name: start mesos-slave service
+  service: name=mesos-slave state=started enabled=yes
+
+- name: overwrite /etc/mesos-slave/containerizers file
+  template: src=containerizers.j2 dest=/etc/mesos-slave/containerizers

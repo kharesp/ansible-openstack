@@ -1,0 +1,9 @@
+---
+- hosts: mesos_slaves
+  become: yes
+  vars: 
+    - mesos_masters: "{{ groups['mesos_masters'] }}"
+  roles: 
+    - common
+    - docker
+    - {role: mesos, mesos_mode: slave}

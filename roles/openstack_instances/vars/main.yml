@@ -1,0 +1,6 @@
+---
+image: 3554e94a-3fd3-4248-9425-baa107ee7f62
+key_name: hill_center_access
+flavor: ps.small
+security_groups: default
+ext_router_name: kharesp_router1

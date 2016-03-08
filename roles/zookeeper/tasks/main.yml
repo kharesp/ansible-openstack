@@ -1,0 +1,18 @@
+---
+- name: update apt cache
+  apt: update_cache=yes
+
+- name: install zookeeper and zookeeprd 
+  apt: pkg={{ item }} state=installed
+  with_items:
+    - zookeeper
+    - zookeeperd
+
+- name: overwrite myid file
+  template: src=myid.j2 dest={{ conf_path }}/myid
+
+- name: overwrite default config file 
+  template: src=zoo.cfg.j2 dest={{ conf_path}}/zoo.cfg 
+
+- name: restart zookeeper
+  service: name=zookeeper state=restarted enabled=yes

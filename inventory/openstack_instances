@@ -1,0 +1,13 @@
+[nw1]
+vm[1:1] nw=nw1 subnet=subnet1 cidr=10.2.1.0/24
+
+[nw2]
+vm[2:2] nw=nw2 subnet=subnet2 cidr=10.2.2.0/24
+
+[nw3]
+vm[3:3] nw=nw3 subnet=subnet3 cidr=10.2.3.0/24
+
+[openstack_instances:children]
+nw1
+nw2
+nw3

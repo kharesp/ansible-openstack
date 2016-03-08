@@ -1,0 +1,17 @@
+---
+- hosts: openstack_instances
+  connection: local
+  gather_facts: false
+  roles:
+    - openstack_instances
+
+- hosts: openstack_instances
+  become: yes
+  tasks: 
+    - name: configure /etc/hosts files
+      lineinfile:
+        dest: /etc/hosts
+        regexp: '.*{{ item }}$'
+        line: "{{ hostvars[item]['ansible_ssh_host'] }} {{ item }}"
+        state: present
+      with_items: groups['openstack_instances']

@@ -1,0 +1,32 @@
+---
+- name: create private network
+  os_network:
+    state: present
+    name: "{{ nw }}"
+
+- name: attach subnet to private network
+  os_subnet:
+    state: present
+    network_name: "{{ nw }}"
+    name: "{{ subnet }}" 
+    cidr: "{{ cidr }}"
+  register: subnet
+
+- name: attach interface to external router
+  shell: bin/add_router_interface.sh '{{ext_router_name }}' '{{ subnet.id }}'
+
+- name: launch VM 
+  os_server: 
+    state: present
+    name: "{{ inventory_hostname }}"
+    image: "{{ image }}" 
+    key_name: "{{ key_name }}"
+    flavor: "{{ flavor }}" 
+    security_groups: "{{ security_groups }}" 
+    auto_floating_ip: false
+    nics: 
+      - net-name: "{{ nw }}"
+  register: vm_info
+
+- name: set ansible_ssh_host for this vm 
+  set_fact: ansible_ssh_host={{ vm_info.openstack.private_v4 }}

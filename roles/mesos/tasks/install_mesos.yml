@@ -1,0 +1,22 @@
+---
+- name: add apt-key
+  apt_key: id=E56151BF keyserver=keyserver.ubuntu.com state=present
+
+- name: get distribution name
+  shell: lsb_release -is | tr '[:upper:]' '[:lower:]'
+  register: distro
+  changed_when: false
+
+- name: get codename
+  command: lsb_release -cs
+  register: codename
+  changed_when: false
+
+- name: add mesosphere repository
+  apt_repository:
+    repo: "deb http://repos.mesosphere.com/{{ distro.stdout }} {{ codename.stdout }} main"
+    state: present
+    update_cache: yes
+
+- name: install mesos  
+  apt: pkg=mesos state=present

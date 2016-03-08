@@ -1,0 +1,11 @@
+---
+- include: install_mesos.yml
+
+- include: marathon.yml
+  when: mesos_mode is defined and mesos_mode == "master"
+
+- include: mesos_master.yml
+  when: mesos_mode is defined and mesos_mode == "master"
+
+- include: mesos_slave.yml
+  when: mesos_mode is defined and mesos_mode == "slave"

@@ -1,0 +1,6 @@
+apt_system_packages: 
+  - build-essential
+  - python-setuptools
+  - python-pip
+  - git
+java_home: /usr/lib/jvm/java-8-oracle

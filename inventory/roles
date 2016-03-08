@@ -1,0 +1,5 @@
+[mesos_masters]
+vm1
+
+[mesos_slaves]
+vm[2:3]

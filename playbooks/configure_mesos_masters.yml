@@ -1,0 +1,26 @@
+---
+- hosts: mesos_masters
+  connection: local
+  gather_facts: false
+  tasks: 
+    - name: allocate floating ip
+      os_floating_ip: 
+        state: present
+        server: "{{ inventory_hostname }}"
+        reuse: yes
+      register: ip
+    - name: set variable public_ip
+      set_fact: public_ip={{ ip.floating_ip.floating_ip_address }}
+    - name: print assigned public ip
+      debug: 
+        msg: "{{ public_ip }}"
+
+- hosts: mesos_masters
+  become: yes
+  vars: 
+    - zookeeper_servers: "{{ groups['mesos_masters'] }}"
+  roles: 
+    - common
+    - docker
+    - zookeeper 
+    - {role: mesos, mesos_mode: master}

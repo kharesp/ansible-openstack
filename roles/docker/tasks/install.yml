@@ -1,0 +1,32 @@
+---
+- name: add GPG key
+  apt_key: keyserver={{docker_keyserver}} id={{docker_keyserver_id}} state=present
+
+- name: get linux distribution codename
+  command: lsb_release -cs
+  register: codename
+  changed_when: false
+
+- name: get kernel version
+  command: uname -r
+  register: kernel_version
+  changed_when: false
+
+- name: add docker deb repo
+  apt_repository: 
+    repo: "deb https://apt.dockerproject.org/repo ubuntu-{{ codename.stdout }} main"
+    state: present
+    update_cache: yes
+
+- name: install linux-image-extra-$(uname -r)
+  apt: 
+    name: "linux-image-extra-{{ kernel_version.stdout }}"
+    state: present
+
+- name: install docker
+  apt: 
+    name: "docker-engine"
+    state: present
+
+- name: install docker-py
+  pip: name=docker-py
