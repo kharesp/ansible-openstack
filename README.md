@@ -130,9 +130,37 @@ external router information in `./roles/openstack_instances/vars/main.yml`:
    This will provision the VMs in openstack and as per the roles specified in `./inventory/roles` file, configure a mesos cluster. 
 
 
-
 #####Brief description of ansible scripts 
+The contents of the main playbook `cluster.yml` are as follows and It includes the playbooks present under `./playbooks` directory and executes them: 
+
+```
+---
+- include: playbooks/provision_os_instances.yml
+- include: playbooks/configure_mesos_masters.yml
+- include: playbooks/configure_mesos_slaves.yml
+```
 
 
+1. `./playbooks/provision_os_instances.yml` playbook will provision the VMs in openstack as per the tasks defined under `openstack_instances` role at `./roles/openstack_instances/tasks/main.yml`. It will also update the `/etc/hosts` file on each provisioned VM so that each provisioned machine knows the private-ip and hostname of other provisioned VMs.
+   For example: 
 
+   ```
+   10.2.1.10 vm1
+   10.2.2.7 vm2
+   10.2.3.7 vm3
+   10.2.4.2 vm4
+   10.2.5.2 vm5
+   10.2.6.2 vm6
+   ```
 
+2. `./playbooks/configure_mesos_masters.yml` playbook will assign a floating/public IP to VMs which have the role of `mesos-masters` and provision those VMs with tasks defined under roles: `common`, `docker`, `zookeeper` and `mesos`.
+
+   `common`: Installs `java`, `build-essential`, `python-pip`, `git` and `python-setuptools`
+   
+   `docker`: Installs docker 
+   
+   `zookeeper`: Installs zookeeper 
+   
+   `mesos`: Installs `mesos-master`
+
+3. `./playbooks/configure_mesos_slaves.yml` playbook will provision the VMs which have the role of `mesos-slaves` by executing the tasks defined under the roles: `common`, `docker` and `mesos`. 
