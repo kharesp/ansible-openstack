@@ -2,4 +2,4 @@
 vm1
 
 [mesos_slaves]
-vm[2:3]
+vm[2:6]
