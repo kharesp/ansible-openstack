@@ -2,7 +2,7 @@
 - hosts: mesos_slaves
   become: yes
   vars: 
-    - mesos_masters: "{{ groups['mesos_masters'] }}"
+    - zookeeper_servers: "{{ groups['mesos_masters'] }}"
   roles: 
     - common
     - docker

@@ -1,3 +1,12 @@
 ---
+- name: overwrite /etc/mesos-master/ip file
+  template: src=ip.j2 dest=/etc/mesos-master/ip
+
+- name: overwrite /etc/mesos/zk file 
+  template: src=zk_servers.j2 dest=/etc/mesos/zk
+
 - name: start mesos-master
   service: name=mesos-master state=started enabled=yes
+
+- name: stop mesos-slave 
+  service: name=mesos-slave state=stopped enabled=no

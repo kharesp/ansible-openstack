@@ -3,13 +3,16 @@
   service: name=zookeeper state=stopped enabled=no
 
 - name: overwrite /etc/mesos/zk file
-  template: src=masters.j2 dest=/etc/mesos/zk
+  template: src=zk_servers.j2 dest=/etc/mesos/zk
 
 - name: stop mesos-master service
   service: name=mesos-master state=stopped enabled=no
 
-- name: start mesos-slave service
-  service: name=mesos-slave state=started enabled=yes
-
 - name: overwrite /etc/mesos-slave/containerizers file
   template: src=containerizers.j2 dest=/etc/mesos-slave/containerizers
+
+- name: overwrite /etc/mesos-slave/ip file
+  template: src=ip.j2 dest=/etc/mesos-slave/ip
+
+- name: start mesos-slave service
+  service: name=mesos-slave state=started enabled=yes
