@@ -28,5 +28,8 @@
     name: "docker-engine"
     state: present
 
+- name: add user to docker group
+  shell: usermod -aG docker {{ ansible_ssh_user }}
+
 - name: install docker-py
   pip: name=docker-py

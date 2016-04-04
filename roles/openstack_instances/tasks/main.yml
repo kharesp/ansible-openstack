@@ -29,4 +29,6 @@
   register: vm_info
 
 - name: set ansible_ssh_host for this vm 
-  set_fact: ansible_ssh_host={{ vm_info.openstack.private_v4 }}
+  set_fact: 
+    ansible_ssh_host={{ vm_info.openstack.private_v4 }}
+    ansible_ssh_user=ubuntu
