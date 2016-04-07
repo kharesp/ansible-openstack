@@ -1,2 +1,8 @@
 ---
-- name: install weave 
+- name: install weave and weave scope
+  shell: "{{ item }}"
+  with_items: 
+    - curl -L git.io/weave -o /usr/local/bin/weave
+    - chmod +x /usr/local/bin/weave
+    - wget -O /usr/local/bin/scope https://git.io/scope
+    - chmod +x /usr/local/bin/scope

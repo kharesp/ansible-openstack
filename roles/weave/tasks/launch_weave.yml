@@ -1,0 +1,39 @@
+---
+- name: configure mesos settings for weave
+  template: src={{ item.src }} dest={{ item.dest }}
+  with_items:
+    - { src: 'docker_socket.j2', dest: '/etc/mesos-slave/docker_socket' }
+    - { src: 'executor_registration_timeout.j2', dest: '/etc/mesos-slave/executor_registration_timeout'}
+    - { src: 'executor_environment_variables.j2', dest: '/etc/mesos-slave/executor_environment_variables'}
+  when: mesos_mode is defined and mesos_mode == "slave"
+  notify: 
+  - restart_slave
+
+- name: set weave launcher 
+  set_fact: 
+    weave_launcher: "{{ groups['mesos_masters'][0] }}"
+
+- name: print out weave launcher
+  debug: 
+    msg: "{{weave_launcher}}"
+
+- name: set weave ip 
+  set_fact: 
+    weave_ip: "{{ hostvars[weave_launcher]['ansible_ssh_host'] }}"
+
+- name: print out weave ip
+  debug:
+    msg: "{{weave_ip}}"
+
+- name: check if weave is running
+  shell: docker ps | grep weave  
+  ignore_errors: yes 
+  register: weave_running
+
+- name: start weave
+  shell: weave launch 
+  when: inventory_hostname == "{{ weave_launcher }}" and weave_running.rc == 1 
+
+- name: start weave
+  shell: weave launch "{{ weave_ip }}"
+  when: inventory_hostname != "{{ weave_launcher }}" and weave_running.rc == 1

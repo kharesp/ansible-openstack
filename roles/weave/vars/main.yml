@@ -1,0 +1,4 @@
+---
+docker_socket: /var/run/weave/weave.sock
+executor_registration_timeout: 5mins
+docker_host: unix:///var/run/weave/weave.sock

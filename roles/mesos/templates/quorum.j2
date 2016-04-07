@@ -1,1 +1,3 @@
-{{ groups['mesos_masters'] | length | round(0,'ceil') | int }}
+{% set len = groups['mesos_masters'] | length  %}
+{% set size = len/2 %}
+{{ size | round(0,'ceil') | int }}

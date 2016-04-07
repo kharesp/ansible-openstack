@@ -1,2 +1,4 @@
 ---
 - include: install_weave.yml
+
+- include: launch_weave.yml
