@@ -24,3 +24,4 @@
     - docker
     - zookeeper 
     - {role: mesos, mesos_mode: master}
+    - {role: weave, mesos_mode: master}

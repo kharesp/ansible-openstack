@@ -1,0 +1,13 @@
+description "Marathon scheduler for Mesos"
+
+start on runlevel [2345]
+stop on runlevel [!2345]
+
+respawn
+respawn limit 10 5
+
+{% if {{ groups['mesos_masters'] | length }} > 1 %} 
+exec /usr/bin/marathon --ha --hostname {{ ansible_ssh_host }}
+{% else %}
+exec /usr/bin/marathon 
+{% endif %}

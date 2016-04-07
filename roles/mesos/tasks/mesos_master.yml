@@ -2,8 +2,17 @@
 - name: overwrite /etc/mesos-master/ip file
   template: src=ip.j2 dest=/etc/mesos-master/ip
 
+- name: overwrite /etc/mesos-master/quorum file 
+  template: src=quorum.j2 dest=/etc/mesos-master/quorum
+
+- name: overwrite /etc/mesos-master/cluster file 
+  template: src=cluster.j2 dest=/etc/mesos-master/cluster
+
 - name: overwrite /etc/mesos/zk file 
   template: src=zk_servers.j2 dest=/etc/mesos/zk
+
+- name: overwrite /etc/init/marathon.conf file
+  template: src=marathon.conf.j2 dest=/etc/init/marathon.conf
 
 - name: start mesos-master
   service: name=mesos-master state=started enabled=yes

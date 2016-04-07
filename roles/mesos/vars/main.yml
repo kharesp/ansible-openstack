@@ -1,2 +1,3 @@
 ---
+cluster_name: pubsubCoord
 mesos_containerizers:  docker,mesos

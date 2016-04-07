@@ -7,3 +7,4 @@
     - common
     - docker
     - {role: mesos, mesos_mode: slave}
+    - {role: weave, mesos_mode: slave}
