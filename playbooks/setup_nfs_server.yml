@@ -1,0 +1,5 @@
+---
+- hosts: nfs_server
+  become: yes
+  roles:
+    - { role: nfs, mode: server }

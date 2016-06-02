@@ -1,0 +1,31 @@
+---
+- name: ensure parent directory exists
+  file:
+    path: "{{dev_environ_dir}}"
+    state: directory
+    owner: ubuntu
+    group: ubuntu
+    mode: u=rwx,g=rwx,o=rx
+
+- name: download zookeeper-{{zookeeper_version}}
+  get_url: url={{zookeeper_download_url}} dest={{ dev_environ_dir}}
+
+- name: unpack zookeeper
+  shell: tar -xvzf zookeeper-{{zookeeper_version}}.tar.gz && rm zookeeper-{{zookeeper_version}}.tar.gz
+  args:
+    executable: /bin/bash
+    chdir: "{{ dev_environ_dir }}"
+
+- name: set $ZK_HOME
+  lineinfile:
+    state: present
+    dest: /home/ubuntu/.profile
+    line: 'export ZK_HOME={{ zk_home }}'
+    insertafter: 'EOF'
+    regexp: 'export ZK_HOME={{ zk_home }}'
+
+- name: source profile 
+  shell: . /home/ubuntu/.profile
+
+- name: add zoo.cfg file
+  template: src=zoo.cfg.j2 dest={{zk_home}}/conf/zoo.cfg 

@@ -1,0 +1,6 @@
+---
+- hosts: zk_ensemble
+  become: yes
+  roles:
+    - common
+    - zookeeper_dynamic

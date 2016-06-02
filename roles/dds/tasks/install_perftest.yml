@@ -1,0 +1,21 @@
+---
+- name: extract rti dds 5.2.0 perftest
+  become_user: ubuntu
+  shell: tar -xvzf "{{ RTI_PERFTEST_FILE }}" && rm "{{ RTI_PERFTEST_FILE }}"
+  args:
+    executable: /bin/bash
+    chdir: "{{ DDS_HOME }}"
+
+- name: build peftest 
+  shell: source /home/ubuntu/.profile && ant -propertyfile ../resource/properties/dds_release.properties 
+  args:
+    executable: /bin/bash
+    chdir: "{{ RTI_PERFTEST_HOME }}/perftest_java"
+
+- name: set $RTI_PERFTEST_HOME 
+  lineinfile:
+    state: present
+    dest: /home/ubuntu/.profile 
+    line: 'export RTI_PERFTEST_HOME={{ RTI_PERFTEST_HOME }}'
+    insertafter: 'EOF'
+    regexp: 'export RTI_PERFTEST_HOME={{ RTI_PERFTEST_HOME }}'

@@ -1,0 +1,78 @@
+---
+- name: copy dds dependencies 
+  copy: 
+    src: ../lib/dds
+    dest: /home/ubuntu/dev_environ/
+    owner: ubuntu
+    group: ubuntu
+    mode: u=rwx,g=r,o=r
+
+- name: make dds installer executable
+  shell: "chmod u+x {{ DDS_HOME }}/{{ INSTALLER }}"
+  args:
+    chdir: "{{ DDS_HOME }}"
+
+- name: run dds installer
+  become_user: ubuntu
+  shell: "./{{ INSTALLER }} --mode unattended --prefix {{ DDS_HOME }}"
+  args:
+    executable: /bin/bash
+    chdir: "{{ DDS_HOME }}"
+
+
+- name: install rti license file
+  shell: "mv rti_license.dat rti_connext_dds-{{ CONNEXT_VER }}"
+  args:
+    chdir: "{{ DDS_HOME }}"
+
+- name: install rti bundle file
+  shell: "./rti_connext_dds-{{CONNEXT_VER}}/bin/rtipkginstall -u {{BUNDLE}}"
+  args:
+    executable: /bin/bash
+    chdir: "{{ DDS_HOME }}"
+
+- name: set $NDDSHOME
+  lineinfile:
+    state: present
+    dest: /home/ubuntu/.profile 
+    line: 'export NDDSHOME={{ NDDSHOME }}'
+    insertafter: 'EOF'
+    regexp: 'export NDDSHOME={{ NDDSHOME }}'
+
+- name: set $RTI_LICENSE_FILE
+  lineinfile:
+    state: present
+    dest: /home/ubuntu/.profile 
+    line: 'export RTI_LICENSE_FILE={{ RTI_LICENSE_FILE }}'
+    insertafter: 'EOF'
+    regexp: 'export RTI_LICENSE_FILE={{ RTI_LICENSE_FILE }}'
+
+- name: set $RTI_WORKSPACE
+  lineinfile:
+    state: present
+    dest: /home/ubuntu/.profile 
+    line: 'export RTI_WORKSPACE={{ RTI_WORKSPACE }}'
+    insertafter: 'EOF'
+    regexp: 'export RTI_WORKSPACE={{ RTI_WORKSPACE }}'
+
+- name: add $NDDSHOME to $PATH 
+  lineinfile:
+    state: present
+    dest: /home/ubuntu/.profile
+    line: 'export PATH=$PATH:$NDDSHOME/bin'
+    insertafter: 'EOF'
+    regexp: 'export PATH=\$PATH:\$NDDSHOME/bin'
+
+- name: set $LD_LIBRARY_PATH
+  lineinfile:
+    state: present
+    dest: /home/ubuntu/.profile
+    line: 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$NDDSHOME/lib/{{ HOST_PLATFORM}}{{GCC}}'
+    insertafter: 'EOF'
+    regexp: 'export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$NDDSHOME/lib/{{ HOST_PLATFORM}}{{GCC}}'
+
+- name: remove installer and bundle files
+  file: path={{item}} state=absent 
+  with_items:
+    - "{{ DDS_HOME }}/{{ INSTALLER }}"
+    - "{{ DDS_HOME }}/{{ BUNDLE }}"

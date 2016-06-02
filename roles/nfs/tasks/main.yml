@@ -1,0 +1,6 @@
+---
+- include: nfs_server.yml
+  when: mode is defined and mode == "server"
+
+- include: nfs_client.yml
+  when: mode is defined and mode == "client"

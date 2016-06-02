@@ -1,0 +1,36 @@
+---
+- name: ensure dev_environ dir exists
+  file:
+    path: "{{dev_environ_dir}}"
+    state: directory
+    owner: ubuntu
+    group: ubuntu
+    mode: u=rwx,g=rwx,o=rx
+
+- name: download scala v{{ scala_version }}
+  get_url: url={{ scala_download_url }} dest={{ dev_environ_dir }} 
+
+- name: unpack scala
+  shell: tar -xvf scala-{{scala_version}}.tgz && rm scala-{{scala_version}}.tgz 
+  args:
+    executable: /bin/bash
+    chdir: "{{ dev_environ_dir }}"
+
+- name: set $SCALA_HOME
+  lineinfile:
+    state: present
+    dest: /home/ubuntu/.profile
+    line: 'export SCALA_HOME={{ scala_home }}'
+    insertafter: 'EOF'
+    regexp: 'export SCALA_HOME={{ scala_home }}'
+
+- name: set $PATH 
+  lineinfile:
+    state: present
+    dest: /home/ubuntu/.profile
+    line: 'export PATH=$PATH:$SCALA_HOME/bin'
+    insertafter: 'EOF'
+    regexp: 'export PATH=\$PATH:\$SCALA_HOME/bin'
+
+- name: source profile 
+  shell: . /home/ubuntu/.profile

@@ -1,0 +1,22 @@
+---
+- name: check if rtidds is installed
+  shell: source /home/ubuntu/.profile && rtiddsgen -h 
+  args:
+    executable: /bin/bash
+  register: res
+  ignore_errors: True
+
+
+- include: install_dds.yml
+  when: res.rc != 0 
+
+- name: check if perftest is installed
+  stat: path={{ RTI_PERFTEST_HOME }}
+  register: dir 
+  
+- name: print out if perftest is installed
+  debug: 
+    msg: dir
+
+- include: install_perftest.yml
+  when: dir.stat.islnk is not defined

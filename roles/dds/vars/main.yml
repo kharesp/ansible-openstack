@@ -1,0 +1,13 @@
+---
+CONNEXT_VER: 5.2.0
+CONNEXT_PACKAGE_TYPE: pro
+HOST_PLATFORM: x64Linux
+GCC: 3gcc4.8.2
+DDS_HOME: /home/ubuntu/dev_environ/dds
+INSTALLER: rti_connext_dds-{{ CONNEXT_VER }}-{{ CONNEXT_PACKAGE_TYPE }}-host-{{ HOST_PLATFORM }}.run
+BUNDLE: rti_connext_dds-{{ CONNEXT_VER }}-{{CONNEXT_PACKAGE_TYPE }}-target-{{ HOST_PLATFORM }}{{ GCC }}.rtipkg
+NDDSHOME: "{{ DDS_HOME }}/rti_connext_dds-{{ CONNEXT_VER }}"
+RTI_LICENSE_FILE: "{{ NDDSHOME }}/rti_license.dat"
+RTI_WORKSPACE: /home/ubuntu/rti_workspace
+RTI_PERFTEST_HOME: "{{ DDS_HOME }}/rtiperftest.5.2.0"
+RTI_PERFTEST_FILE: rtiperftestdds520.tar.gz 

@@ -1,0 +1,3 @@
+---
+#- include: install_zk.yml
+- include: start_zk.yml

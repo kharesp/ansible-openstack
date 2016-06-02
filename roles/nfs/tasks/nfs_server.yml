@@ -1,0 +1,17 @@
+---
+- name: install nfs server
+  apt: pkg= nfs-kernel-server state= present
+
+- name: ensure nfs_dir path exists
+  file: 
+    - path: {{ nfs_dir }}
+    - state: directory
+    - owner: {{ ansible_ssh_user }}
+    - group: {{ ansible_ssh_user }}
+    - mode: "u=rw, g=r, o=r"
+
+- name: export nfs_dir in /etc/exports
+  template: src= exports.j2 dest=/etc/exports  
+
+- name: start nfs-kernel-server service
+  service: name=nfs-kernel-server state=started enabled=yes 

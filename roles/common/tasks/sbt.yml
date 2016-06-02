@@ -1,0 +1,12 @@
+---
+- name: add key for sbt
+  apt_key: keyserver={{ sbt_keyserver }} id={{sbt_keyserver_id }} state=present
+
+- name: add sbt deb repo
+  apt_repository:
+    repo: "deb https://dl.bintray.com/sbt/debian /" 
+    state: present
+    update_cache: yes
+
+- name: install sbt
+  apt: name=sbt state=present

@@ -1,0 +1,16 @@
+---
+- name: ensure nfs_dir path exists
+  file:
+    path: "{{ nfs_dir }}"
+    state: directory
+    owner: "{{ ansible_ssh_user }}"
+    group: "{{ ansible_ssh_user }}"
+    mode: "u=rwx"
+  
+- name: mount nfs_dir
+  mount: 
+    src: "{{ hostvars[groups['nfs_server'][0]]['ansible_ssh_host'] }}:{{ nfs_dir}}"
+    name: "{{ nfs_dir}}"
+    state: mounted 
+    fstype: nfs 
+    opts: rw,sync

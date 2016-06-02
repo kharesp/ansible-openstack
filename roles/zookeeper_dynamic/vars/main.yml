@@ -1,0 +1,11 @@
+---
+zookeeper_version: 3.5.1-alpha
+zookeeper_download_url: "http://apache.cs.utah.edu/zookeeper/zookeeper-{{zookeeper_version}}/zookeeper-{{zookeeper_version}}.tar.gz"
+dev_environ_dir: "/home/ubuntu/dev_environ"
+zk_home: "{{dev_environ_dir}}/zookeeper-{{zookeeper_version}}"
+tick_time: 2000 
+init_limit: 5
+sync_limit: 2
+data_dir: /var/lib/zookeeper
+log_dir: /var/log/zookeeper 
+client_port: 2181

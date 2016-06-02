@@ -1,0 +1,28 @@
+---
+- name: copy zk-init script
+  copy: 
+    src: ../lib/zookeeper_dynamic/zk-init.sh
+    dest: "{{ zk_home }}"
+    owner: ubuntu
+    group: ubuntu
+    mode: u=rwx,g=rwx,o=r
+
+- name: remove zoo.cfg.dynamic 
+  file:
+    path: "{{zk_home}}/conf/zoo.cfg.dynamic"
+    state: absent   
+
+- name: start zk-init script for the first ZK server
+  shell: ./zk-init.sh {{ zk_home }} 1
+  args:
+    executable: /bin/bash
+    chdir: "{{ zk_home }}"
+  when: inventory_hostname == groups['zk_ensemble'][0]
+
+- name: start zk-init script for other ZK servers in ensemble
+  shell: ./zk-init.sh {{ zk_home }} {{ item.2 }} {{ hostvars[groups['zk_ensemble']][0]['ansible_ssh_host'] }}
+  args:
+    executable: /bin/bash
+    chdir: "{{ zk_home }}"
+  when: inventory_hostname == groups['zk_ensemble'][ {{item.2}} - 1] and inventory_hostname!= groups['zk_ensemble'][0]
+  with_items: "{{ groups['zk_ensemble'] }}" 
