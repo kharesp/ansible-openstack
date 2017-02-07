@@ -1,0 +1,13 @@
+- name: check if ptpd is running
+  shell: ps -ef | grep ptpd | grep -v grep 
+  register: running
+  failed_when: running.rc > 1  
+
+- name: print running status
+  debug:
+    msg: "{{ running.stdout }}"
+
+- name: start ptpd 
+  become: yes
+  command: ptpd -g 
+  when: "running.stdout.find('ptpd') == -1"

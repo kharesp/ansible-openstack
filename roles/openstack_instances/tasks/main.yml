@@ -29,6 +29,19 @@
   register: vm_info
 
 - name: set ansible_ssh_host for this vm 
-  set_fact: 
-    ansible_ssh_host={{ vm_info.openstack.private_v4 }}
-    ansible_ssh_user=ubuntu
+  set_fact: ansible_ssh_host={{ vm_info.openstack.private_v4 }}  
+
+- name: set ansible_ssh_user for this vm
+  set_fact: ansible_ssh_user=ubuntu
+
+- name: assign floating ip
+  os_floating_ip: 
+    state: present
+    server: "{{ inventory_hostname }}"
+    reuse: yes
+  register: ip 
+  when: floating_ip is defined and floating_ip == "true" 
+
+#- name: set host variable public_ip
+#  set_fact: public_ip={{ ip.floating_ip.floating_ip_address }}
+#  when: floating_ip is defined and floating_ip == "true"

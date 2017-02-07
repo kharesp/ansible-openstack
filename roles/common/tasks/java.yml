@@ -11,3 +11,22 @@
 
 - name: install jdk-8
   apt: name=oracle-java8-installer state=present
+
+- name: set $JAVA_HOME
+  lineinfile:
+    state: present
+    dest: /home/ubuntu/.profile
+    line: 'export JAVA_HOME={{ java_home }}'
+    insertafter: 'EOF'
+    regexp: 'export JAVA_HOME={{ java_home }}'
+
+- name: set $PATH 
+  lineinfile:
+    state: present
+    dest: /home/ubuntu/.profile
+    line: 'export PATH=$PATH:$JAVA_HOME/bin'
+    insertafter: 'EOF'
+    regexp: 'export PATH=\$PATH:\$JAVA_HOME/bin'
+
+- name: source profile 
+  shell: . /home/ubuntu/.profile

@@ -1,0 +1,42 @@
+---
+- name: kill process
+  command: pkill -fc "{{ pattern }}"
+  when: action == "kill"
+  register: res 
+  failed_when: res.rc > 1 
+
+- name: clean log dir
+  file:
+    state: absent
+    path: "{{ log_dir }}/"
+  when: action == "clean_logs"
+
+- name: start ptpd
+  include: ptpd.yml
+  when: action == "start_ptpd"
+ 
+- name: start routing service
+  shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/start_rs.sh 
+  when: action == "start_rs"
+    
+- name: start edge broker   
+  shell: . "{{ bashrc }}" &&  cd "{{ src_home }}" && ./scripts/start_eb.sh "{{ zk_connector }}" "{{ emulated_broker }}"
+  when: action == "start_eb"
+
+- name: start routing broker
+  shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/start_rb.sh "{{ zk_connector }}" "{{ emulated_broker }}"
+  when: action == "start_rb"
+
+- name: start subscriber process
+  shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/start_subscribers.sh "{{ subscriber_count }}" 
+    "{{ subscriber_domain }}" "{{ topic }}" "{{ type }}" "{{ sample_count }}" "{{ log_dir }}" "{{ run_id }}" "{{ zk_connector }}" 
+  when: action == "start_sub"
+
+- name: start publisher process
+  shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/start_publishers.sh "{{ publisher_count }}" 
+    "{{ publisher_domain }}" "{{ topic }}" "{{ type }}" "{{ sample_count }}" "{{ sleep_interval }}" "{{ run_id }}" "{{ zk_connector }}"
+  when: action == "start_pub"
+
+- name: copy remote files
+  synchronize: src=/home/ubuntu/log/1/ dest=logs/1/ mode=pull
+  when: action == "fetch"

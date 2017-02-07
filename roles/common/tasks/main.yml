@@ -1,3 +1,14 @@
 ---
 - include: base_packages.yml 
 - include: java.yml
+#- name: check if scala is installed
+#  shell: source /home/ubuntu/.profile && scala -version
+#  args:
+#    executable: /bin/bash
+#  register: res
+#  ignore_errors: True
+#
+#- include: scala.yml
+#  when: res.rc != 0
+#
+#- include: sbt.yml

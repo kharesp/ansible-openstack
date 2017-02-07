@@ -1,0 +1,5 @@
+---
+- hosts: openstack_instances 
+  become: yes
+  roles:
+    - { role: nfs, mode: client }

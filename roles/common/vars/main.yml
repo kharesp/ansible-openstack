@@ -3,4 +3,14 @@ apt_system_packages:
   - python-setuptools
   - python-pip
   - git
+  - ant
+  - ksh
+  - nfs-common
+  - ptpd
 java_home: /usr/lib/jvm/java-8-oracle
+scala_version: 2.11.8
+dev_environ_dir: /home/ubuntu/dev_environ
+scala_download_url: "http://downloads.lightbend.com/scala/{{scala_version}}/scala-{{scala_version}}.tgz" 
+scala_home: "{{dev_environ_dir}}/scala-{{scala_version}}"
+sbt_keyserver: hkp://keyserver.ubuntu.com:80
+sbt_keyserver_id: 642AC823  

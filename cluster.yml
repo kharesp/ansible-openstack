@@ -1,4 +1,6 @@
 ---
-- include: playbooks/provision_os_instances.yml
-- include: playbooks/configure_mesos_masters.yml
-- include: playbooks/configure_mesos_slaves.yml
+- include: playbooks/set_ansible_ssh_host.yml
+
+- hosts: all
+  roles:
+    - scripts

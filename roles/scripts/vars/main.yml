@@ -1,0 +1,8 @@
+---
+type: DataSample_64B
+log_dir: /home/ubuntu/log
+src_home: /home/ubuntu/workspace/pubsubCoord
+subscriber_domain: 1
+publisher_domain: 0
+zk_connector: 10.2.1.15:2181 
+bashrc: /home/ubuntu/.profile

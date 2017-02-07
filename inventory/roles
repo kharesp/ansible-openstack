@@ -1,6 +1,19 @@
-[mesos_masters]
-vm1
-vm4
+[zk_ensemble]
+zk1
 
-[mesos_slaves]
-vm[2:3]
+[nfs_server]
+master ansible_ssh_host=10.2.1.14
+
+[edge_brokers]
+eb[1:118]
+
+[routing_brokers]
+rb1
+
+[clients]
+cli[1:118]
+
+[nfs_clients]
+rb1
+eb[1:118]
+cli[1:118]
