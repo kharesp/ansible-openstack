@@ -7,475 +7,475 @@ rb1 nw=nw2 subnet=subnet2 cidr=10.2.2.0/24 flavor=m1.large floating_ip=false
 
 [nw3]
 eb1 nw=nw3 subnet=subnet3 cidr=10.2.3.0/24 flavor=m1.medium floating_ip=false 
-cli1 nw=nw3 subnet=subnet3 cidr=10.2.3.0/24 flavor=ps.small floating_ip=false 
+cli1 nw=nw3 subnet=subnet3 cidr=10.2.3.0/24 flavor=m1.medium floating_ip=false 
 
 [nw4]
 eb2 nw=nw4 subnet=subnet4 cidr=10.2.4.0/24 flavor=m1.medium floating_ip=false 
-cli2 nw=nw4 subnet=subnet4 cidr=10.2.4.0/24 flavor=ps.small floating_ip=false 
+cli2 nw=nw4 subnet=subnet4 cidr=10.2.4.0/24 flavor=m1.medium floating_ip=false 
 
 [nw5]
 eb3 nw=nw5 subnet=subnet5 cidr=10.2.5.0/24 flavor=m1.medium floating_ip=false 
-cli3 nw=nw5 subnet=subnet5 cidr=10.2.5.0/24 flavor=ps.small floating_ip=false 
+cli3 nw=nw5 subnet=subnet5 cidr=10.2.5.0/24 flavor=m1.medium floating_ip=false 
 
 [nw6]
 eb4 nw=nw6 subnet=subnet6 cidr=10.2.6.0/24 flavor=m1.medium floating_ip=false
-cli4 nw=nw6 subnet=subnet6 cidr=10.2.6.0/24 flavor=ps.small floating_ip=false
+cli4 nw=nw6 subnet=subnet6 cidr=10.2.6.0/24 flavor=m1.medium floating_ip=false
 
 [nw7]
 eb5 nw=nw7 subnet=subnet7 cidr=10.2.7.0/24 flavor=m1.medium floating_ip=false
-cli5 nw=nw7 subnet=subnet7 cidr=10.2.7.0/24 flavor=ps.small floating_ip=false
+cli5 nw=nw7 subnet=subnet7 cidr=10.2.7.0/24 flavor=m1.medium floating_ip=false
 
 [nw8]
 eb6 nw=nw8 subnet=subnet8 cidr=10.2.8.0/24 flavor=m1.medium floating_ip=false
-cli6 nw=nw8 subnet=subnet8 cidr=10.2.8.0/24 flavor=ps.small floating_ip=false
+cli6 nw=nw8 subnet=subnet8 cidr=10.2.8.0/24 flavor=m1.medium floating_ip=false
 
 [nw9]
 eb7 nw=nw9 subnet=subnet9 cidr=10.2.9.0/24 flavor=m1.medium floating_ip=false
-cli7 nw=nw9 subnet=subnet9 cidr=10.2.9.0/24 flavor=ps.small floating_ip=false
+cli7 nw=nw9 subnet=subnet9 cidr=10.2.9.0/24 flavor=m1.medium floating_ip=false
 
 [nw10]
 eb8 nw=nw10 subnet=subnet10 cidr=10.2.10.0/24 flavor=m1.medium floating_ip=false
-cli8 nw=nw10 subnet=subnet10 cidr=10.2.10.0/24 flavor=ps.small floating_ip=false
+cli8 nw=nw10 subnet=subnet10 cidr=10.2.10.0/24 flavor=m1.medium floating_ip=false
 
 [nw11]
 eb9 nw=nw11 subnet=subnet11 cidr=10.2.11.0/24 flavor=m1.medium floating_ip=false
-cli9 nw=nw11 subnet=subnet11 cidr=10.2.11.0/24 flavor=ps.small floating_ip=false
+cli9 nw=nw11 subnet=subnet11 cidr=10.2.11.0/24 flavor=m1.medium floating_ip=false
 
 [nw12]
 eb10 nw=nw12 subnet=subnet12 cidr=10.2.12.0/24 flavor=m1.medium floating_ip=false
-cli10 nw=nw12 subnet=subnet12 cidr=10.2.12.0/24 flavor=ps.small floating_ip=false
+cli10 nw=nw12 subnet=subnet12 cidr=10.2.12.0/24 flavor=m1.medium floating_ip=false
 
 [nw13]
 eb11 nw=nw13 subnet=subnet13 cidr=10.2.13.0/24 flavor=m1.medium floating_ip=false
-cli11 nw=nw13 subnet=subnet13 cidr=10.2.13.0/24 flavor=ps.small floating_ip=false
+cli11 nw=nw13 subnet=subnet13 cidr=10.2.13.0/24 flavor=m1.medium floating_ip=false
 
 [nw14]
 eb12 nw=nw14 subnet=subnet14 cidr=10.2.14.0/24 flavor=m1.medium floating_ip=false
-cli12 nw=nw14 subnet=subnet14 cidr=10.2.14.0/24 flavor=ps.small floating_ip=false
+cli12 nw=nw14 subnet=subnet14 cidr=10.2.14.0/24 flavor=m1.medium floating_ip=false
 
 [nw15]
 eb13 nw=nw15 subnet=subnet15 cidr=10.2.15.0/24 flavor=m1.medium floating_ip=false
-cli13 nw=nw15 subnet=subnet15 cidr=10.2.15.0/24 flavor=ps.small floating_ip=false
+cli13 nw=nw15 subnet=subnet15 cidr=10.2.15.0/24 flavor=m1.medium floating_ip=false
 
 [nw16]
 eb14 nw=nw16 subnet=subnet16 cidr=10.2.16.0/24 flavor=m1.medium floating_ip=false
-cli14 nw=nw16 subnet=subnet16 cidr=10.2.16.0/24 flavor=ps.small floating_ip=false
+cli14 nw=nw16 subnet=subnet16 cidr=10.2.16.0/24 flavor=m1.medium floating_ip=false
 
 [nw17]
 eb15 nw=nw17 subnet=subnet17 cidr=10.2.17.0/24 flavor=m1.medium floating_ip=false
-cli15 nw=nw17 subnet=subnet17 cidr=10.2.17.0/24 flavor=ps.small floating_ip=false
+cli15 nw=nw17 subnet=subnet17 cidr=10.2.17.0/24 flavor=m1.medium floating_ip=false
 
 [nw18]
 eb16 nw=nw18 subnet=subnet18 cidr=10.2.18.0/24 flavor=m1.medium floating_ip=false
-cli16 nw=nw18 subnet=subnet18 cidr=10.2.18.0/24 flavor=ps.small floating_ip=false
+cli16 nw=nw18 subnet=subnet18 cidr=10.2.18.0/24 flavor=m1.medium floating_ip=false
 
 [nw19]
 eb17 nw=nw19 subnet=subnet19 cidr=10.2.19.0/24 flavor=m1.medium floating_ip=false
-cli17 nw=nw19 subnet=subnet19 cidr=10.2.19.0/24 flavor=ps.small floating_ip=false
+cli17 nw=nw19 subnet=subnet19 cidr=10.2.19.0/24 flavor=m1.medium floating_ip=false
 
 [nw20]
 eb18 nw=nw20 subnet=subnet20 cidr=10.2.20.0/24 flavor=m1.medium floating_ip=false
-cli18 nw=nw20 subnet=subnet20 cidr=10.2.20.0/24 flavor=ps.small floating_ip=false
+cli18 nw=nw20 subnet=subnet20 cidr=10.2.20.0/24 flavor=m1.medium floating_ip=false
 
 [nw21]
 eb19 nw=nw21 subnet=subnet21 cidr=10.2.21.0/24 flavor=m1.medium floating_ip=false
-cli19 nw=nw21 subnet=subnet21 cidr=10.2.21.0/24 flavor=ps.small floating_ip=false
+cli19 nw=nw21 subnet=subnet21 cidr=10.2.21.0/24 flavor=m1.medium floating_ip=false
 
 [nw22]
 eb20 nw=nw22 subnet=subnet22 cidr=10.2.22.0/24 flavor=m1.medium floating_ip=false
-cli20 nw=nw22 subnet=subnet22 cidr=10.2.22.0/24 flavor=ps.small floating_ip=false
+cli20 nw=nw22 subnet=subnet22 cidr=10.2.22.0/24 flavor=m1.medium floating_ip=false
 
 [nw23]
 eb21 nw=nw23 subnet=subnet23 cidr=10.2.23.0/24 flavor=m1.medium floating_ip=false
-cli21 nw=nw23 subnet=subnet23 cidr=10.2.23.0/24 flavor=ps.small floating_ip=false
+cli21 nw=nw23 subnet=subnet23 cidr=10.2.23.0/24 flavor=m1.medium floating_ip=false
 
 [nw24]
 eb22 nw=nw24 subnet=subnet24 cidr=10.2.24.0/24 flavor=m1.medium floating_ip=false
-cli22 nw=nw24 subnet=subnet24 cidr=10.2.24.0/24 flavor=ps.small floating_ip=false
+cli22 nw=nw24 subnet=subnet24 cidr=10.2.24.0/24 flavor=m1.medium floating_ip=false
 
 [nw25]
 eb23 nw=nw25 subnet=subnet25 cidr=10.2.25.0/24 flavor=m1.medium floating_ip=false
-cli23 nw=nw25 subnet=subnet25 cidr=10.2.25.0/24 flavor=ps.small floating_ip=false
+cli23 nw=nw25 subnet=subnet25 cidr=10.2.25.0/24 flavor=m1.medium floating_ip=false
 
 [nw26]
 eb24 nw=nw26 subnet=subnet26 cidr=10.2.26.0/24 flavor=m1.medium floating_ip=false
-cli24 nw=nw26 subnet=subnet26 cidr=10.2.26.0/24 flavor=ps.small floating_ip=false
+cli24 nw=nw26 subnet=subnet26 cidr=10.2.26.0/24 flavor=m1.medium floating_ip=false
 
 [nw27]
 eb25 nw=nw27 subnet=subnet27 cidr=10.2.27.0/24 flavor=m1.medium floating_ip=false
-cli25 nw=nw27 subnet=subnet27 cidr=10.2.27.0/24 flavor=ps.small floating_ip=false
+cli25 nw=nw27 subnet=subnet27 cidr=10.2.27.0/24 flavor=m1.medium floating_ip=false
 
 [nw28]
 eb26 nw=nw28 subnet=subnet28 cidr=10.2.28.0/24 flavor=m1.medium floating_ip=false
-cli26 nw=nw28 subnet=subnet28 cidr=10.2.28.0/24 flavor=ps.small floating_ip=false
+cli26 nw=nw28 subnet=subnet28 cidr=10.2.28.0/24 flavor=m1.medium floating_ip=false
 
 [nw29]
 eb27 nw=nw29 subnet=subnet29 cidr=10.2.29.0/24 flavor=m1.medium floating_ip=false
-cli27 nw=nw29 subnet=subnet29 cidr=10.2.29.0/24 flavor=ps.small floating_ip=false
+cli27 nw=nw29 subnet=subnet29 cidr=10.2.29.0/24 flavor=m1.medium floating_ip=false
 
 [nw30]
 eb28 nw=nw30 subnet=subnet30 cidr=10.2.30.0/24 flavor=m1.medium floating_ip=false
-cli28 nw=nw30 subnet=subnet30 cidr=10.2.30.0/24 flavor=ps.small floating_ip=false
+cli28 nw=nw30 subnet=subnet30 cidr=10.2.30.0/24 flavor=m1.medium floating_ip=false
 
 [nw31]
 eb29 nw=nw31 subnet=subnet31 cidr=10.2.31.0/24 flavor=m1.medium floating_ip=false
-cli29 nw=nw31 subnet=subnet31 cidr=10.2.31.0/24 flavor=ps.small floating_ip=false
+cli29 nw=nw31 subnet=subnet31 cidr=10.2.31.0/24 flavor=m1.medium floating_ip=false
 
 [nw32]
 eb30 nw=nw32 subnet=subnet32 cidr=10.2.32.0/24 flavor=m1.medium floating_ip=false
-cli30 nw=nw32 subnet=subnet32 cidr=10.2.32.0/24 flavor=ps.small floating_ip=false
+cli30 nw=nw32 subnet=subnet32 cidr=10.2.32.0/24 flavor=m1.medium floating_ip=false
 
 [nw33]
 eb31 nw=nw33 subnet=subnet33 cidr=10.2.33.0/24 flavor=m1.medium floating_ip=false
-cli31 nw=nw33 subnet=subnet33 cidr=10.2.33.0/24 flavor=ps.small floating_ip=false
+cli31 nw=nw33 subnet=subnet33 cidr=10.2.33.0/24 flavor=m1.medium floating_ip=false
 
 [nw34]
 eb32 nw=nw34 subnet=subnet34 cidr=10.2.34.0/24 flavor=m1.medium floating_ip=false
-cli32 nw=nw34 subnet=subnet34 cidr=10.2.34.0/24 flavor=ps.small floating_ip=false
+cli32 nw=nw34 subnet=subnet34 cidr=10.2.34.0/24 flavor=m1.medium floating_ip=false
 
 [nw35]
 eb33 nw=nw35 subnet=subnet35 cidr=10.2.35.0/24 flavor=m1.medium floating_ip=false
-cli33 nw=nw35 subnet=subnet35 cidr=10.2.35.0/24 flavor=ps.small floating_ip=false
+cli33 nw=nw35 subnet=subnet35 cidr=10.2.35.0/24 flavor=m1.medium floating_ip=false
 
 [nw36]
 eb34 nw=nw36 subnet=subnet36 cidr=10.2.36.0/24 flavor=m1.medium floating_ip=false
-cli34 nw=nw36 subnet=subnet36 cidr=10.2.36.0/24 flavor=ps.small floating_ip=false
+cli34 nw=nw36 subnet=subnet36 cidr=10.2.36.0/24 flavor=m1.medium floating_ip=false
 
 [nw37]
 eb35 nw=nw37 subnet=subnet37 cidr=10.2.37.0/24 flavor=m1.medium floating_ip=false
-cli35 nw=nw37 subnet=subnet37 cidr=10.2.37.0/24 flavor=ps.small floating_ip=false
+cli35 nw=nw37 subnet=subnet37 cidr=10.2.37.0/24 flavor=m1.medium floating_ip=false
 
 [nw38]
 eb36 nw=nw38 subnet=subnet38 cidr=10.2.38.0/24 flavor=m1.medium floating_ip=false
-cli36 nw=nw38 subnet=subnet38 cidr=10.2.38.0/24 flavor=ps.small floating_ip=false
+cli36 nw=nw38 subnet=subnet38 cidr=10.2.38.0/24 flavor=m1.medium floating_ip=false
 
 [nw39]
 eb37 nw=nw39 subnet=subnet39 cidr=10.2.39.0/24 flavor=m1.medium floating_ip=false
-cli37 nw=nw39 subnet=subnet39 cidr=10.2.39.0/24 flavor=ps.small floating_ip=false
+cli37 nw=nw39 subnet=subnet39 cidr=10.2.39.0/24 flavor=m1.medium floating_ip=false
 
 [nw40]
 eb38 nw=nw40 subnet=subnet40 cidr=10.2.40.0/24 flavor=m1.medium floating_ip=false
-cli38 nw=nw40 subnet=subnet40 cidr=10.2.40.0/24 flavor=ps.small floating_ip=false
+cli38 nw=nw40 subnet=subnet40 cidr=10.2.40.0/24 flavor=m1.medium floating_ip=false
 
 [nw41]
 eb39 nw=nw41 subnet=subnet41 cidr=10.2.41.0/24 flavor=m1.medium floating_ip=false
-cli39 nw=nw41 subnet=subnet41 cidr=10.2.41.0/24 flavor=ps.small floating_ip=false
+cli39 nw=nw41 subnet=subnet41 cidr=10.2.41.0/24 flavor=m1.medium floating_ip=false
 
 [nw42]
 eb40 nw=nw42 subnet=subnet42 cidr=10.2.42.0/24 flavor=m1.medium floating_ip=false
-cli40 nw=nw42 subnet=subnet42 cidr=10.2.42.0/24 flavor=ps.small floating_ip=false
+cli40 nw=nw42 subnet=subnet42 cidr=10.2.42.0/24 flavor=m1.medium floating_ip=false
 
 [nw43]
 eb41 nw=nw43 subnet=subnet43 cidr=10.2.43.0/24 flavor=m1.medium floating_ip=false
-cli41 nw=nw43 subnet=subnet43 cidr=10.2.43.0/24 flavor=ps.small floating_ip=false
+cli41 nw=nw43 subnet=subnet43 cidr=10.2.43.0/24 flavor=m1.medium floating_ip=false
 
 [nw44]
 eb42 nw=nw44 subnet=subnet44 cidr=10.2.44.0/24 flavor=m1.medium floating_ip=false
-cli42 nw=nw44 subnet=subnet44 cidr=10.2.44.0/24 flavor=ps.small floating_ip=false
+cli42 nw=nw44 subnet=subnet44 cidr=10.2.44.0/24 flavor=m1.medium floating_ip=false
 
 [nw45]
 eb43 nw=nw45 subnet=subnet45 cidr=10.2.45.0/24 flavor=m1.medium floating_ip=false
-cli43 nw=nw45 subnet=subnet45 cidr=10.2.45.0/24 flavor=ps.small floating_ip=false
+cli43 nw=nw45 subnet=subnet45 cidr=10.2.45.0/24 flavor=m1.medium floating_ip=false
 
 [nw46]
 eb44 nw=nw46 subnet=subnet46 cidr=10.2.46.0/24 flavor=m1.medium floating_ip=false
-cli44 nw=nw46 subnet=subnet46 cidr=10.2.46.0/24 flavor=ps.small floating_ip=false
+cli44 nw=nw46 subnet=subnet46 cidr=10.2.46.0/24 flavor=m1.medium floating_ip=false
 
 [nw47]
 eb45 nw=nw47 subnet=subnet47 cidr=10.2.47.0/24 flavor=m1.medium floating_ip=false
-cli45 nw=nw47 subnet=subnet47 cidr=10.2.47.0/24 flavor=ps.small floating_ip=false
+cli45 nw=nw47 subnet=subnet47 cidr=10.2.47.0/24 flavor=m1.medium floating_ip=false
 
 [nw48]
 eb46 nw=nw48 subnet=subnet48 cidr=10.2.48.0/24 flavor=m1.medium floating_ip=false
-cli46 nw=nw48 subnet=subnet48 cidr=10.2.48.0/24 flavor=ps.small floating_ip=false
+cli46 nw=nw48 subnet=subnet48 cidr=10.2.48.0/24 flavor=m1.medium floating_ip=false
 
 [nw49]
 eb47 nw=nw49 subnet=subnet49 cidr=10.2.49.0/24 flavor=m1.medium floating_ip=false
-cli47 nw=nw49 subnet=subnet49 cidr=10.2.49.0/24 flavor=ps.small floating_ip=false
+cli47 nw=nw49 subnet=subnet49 cidr=10.2.49.0/24 flavor=m1.medium floating_ip=false
 
 [nw50]
 eb48 nw=nw50 subnet=subnet50 cidr=10.2.50.0/24 flavor=m1.medium floating_ip=false
-cli48 nw=nw50 subnet=subnet50 cidr=10.2.50.0/24 flavor=ps.small floating_ip=false
+cli48 nw=nw50 subnet=subnet50 cidr=10.2.50.0/24 flavor=m1.medium floating_ip=false
 
 [nw51]
 eb49 nw=nw51 subnet=subnet51 cidr=10.2.51.0/24 flavor=m1.medium floating_ip=false
-cli49 nw=nw51 subnet=subnet51 cidr=10.2.51.0/24 flavor=ps.small floating_ip=false
+cli49 nw=nw51 subnet=subnet51 cidr=10.2.51.0/24 flavor=m1.medium floating_ip=false
 
 [nw52]
 eb50 nw=nw52 subnet=subnet52 cidr=10.2.52.0/24 flavor=m1.medium floating_ip=false
-cli50 nw=nw52 subnet=subnet52 cidr=10.2.52.0/24 flavor=ps.small floating_ip=false
+cli50 nw=nw52 subnet=subnet52 cidr=10.2.52.0/24 flavor=m1.medium floating_ip=false
 
 [nw53]
 eb51 nw=nw53 subnet=subnet53 cidr=10.2.53.0/24 flavor=m1.medium floating_ip=false
-cli51 nw=nw53 subnet=subnet53 cidr=10.2.53.0/24 flavor=ps.small floating_ip=false
+cli51 nw=nw53 subnet=subnet53 cidr=10.2.53.0/24 flavor=m1.medium floating_ip=false
 
 [nw54]
 eb52 nw=nw54 subnet=subnet54 cidr=10.2.54.0/24 flavor=m1.medium floating_ip=false
-cli52 nw=nw54 subnet=subnet54 cidr=10.2.54.0/24 flavor=ps.small floating_ip=false
+cli52 nw=nw54 subnet=subnet54 cidr=10.2.54.0/24 flavor=m1.medium floating_ip=false
 
 [nw55]
 eb53 nw=nw55 subnet=subnet55 cidr=10.2.55.0/24 flavor=m1.medium floating_ip=false
-cli53 nw=nw55 subnet=subnet55 cidr=10.2.55.0/24 flavor=ps.small floating_ip=false
+cli53 nw=nw55 subnet=subnet55 cidr=10.2.55.0/24 flavor=m1.medium floating_ip=false
 
 [nw56]
 eb54 nw=nw56 subnet=subnet56 cidr=10.2.56.0/24 flavor=m1.medium floating_ip=false
-cli54 nw=nw56 subnet=subnet56 cidr=10.2.56.0/24 flavor=ps.small floating_ip=false
+cli54 nw=nw56 subnet=subnet56 cidr=10.2.56.0/24 flavor=m1.medium floating_ip=false
 
 [nw57]
 eb55 nw=nw57 subnet=subnet57 cidr=10.2.57.0/24 flavor=m1.medium floating_ip=false
-cli55 nw=nw57 subnet=subnet57 cidr=10.2.57.0/24 flavor=ps.small floating_ip=false
+cli55 nw=nw57 subnet=subnet57 cidr=10.2.57.0/24 flavor=m1.medium floating_ip=false
 
 [nw58]
 eb56 nw=nw58 subnet=subnet58 cidr=10.2.58.0/24 flavor=m1.medium floating_ip=false
-cli56 nw=nw58 subnet=subnet58 cidr=10.2.58.0/24 flavor=ps.small floating_ip=false
+cli56 nw=nw58 subnet=subnet58 cidr=10.2.58.0/24 flavor=m1.medium floating_ip=false
 
 [nw59]
 eb57 nw=nw59 subnet=subnet59 cidr=10.2.59.0/24 flavor=m1.medium floating_ip=false
-cli57 nw=nw59 subnet=subnet59 cidr=10.2.59.0/24 flavor=ps.small floating_ip=false
+cli57 nw=nw59 subnet=subnet59 cidr=10.2.59.0/24 flavor=m1.medium floating_ip=false
 
 [nw60]
 eb58 nw=nw60 subnet=subnet60 cidr=10.2.60.0/24 flavor=m1.medium floating_ip=false
-cli58 nw=nw60 subnet=subnet60 cidr=10.2.60.0/24 flavor=ps.small floating_ip=false
+cli58 nw=nw60 subnet=subnet60 cidr=10.2.60.0/24 flavor=m1.medium floating_ip=false
 
 [nw61]
 eb59 nw=nw61 subnet=subnet61 cidr=10.2.61.0/24 flavor=m1.medium floating_ip=false
-cli59 nw=nw61 subnet=subnet61 cidr=10.2.61.0/24 flavor=ps.small floating_ip=false
+cli59 nw=nw61 subnet=subnet61 cidr=10.2.61.0/24 flavor=m1.medium floating_ip=false
 
 [nw62]
 eb60 nw=nw62 subnet=subnet62 cidr=10.2.62.0/24 flavor=m1.medium floating_ip=false
-cli60 nw=nw62 subnet=subnet62 cidr=10.2.62.0/24 flavor=ps.small floating_ip=false
+cli60 nw=nw62 subnet=subnet62 cidr=10.2.62.0/24 flavor=m1.medium floating_ip=false
 
 [nw63]
 eb61 nw=nw63 subnet=subnet63 cidr=10.2.63.0/24 flavor=m1.medium floating_ip=false
-cli61 nw=nw63 subnet=subnet63 cidr=10.2.63.0/24 flavor=ps.small floating_ip=false
+cli61 nw=nw63 subnet=subnet63 cidr=10.2.63.0/24 flavor=m1.medium floating_ip=false
 
 [nw64]
 eb62 nw=nw64 subnet=subnet64 cidr=10.2.64.0/24 flavor=m1.medium floating_ip=false
-cli62 nw=nw64 subnet=subnet64 cidr=10.2.64.0/24 flavor=ps.small floating_ip=false
+cli62 nw=nw64 subnet=subnet64 cidr=10.2.64.0/24 flavor=m1.medium floating_ip=false
 
 [nw65]
 eb63 nw=nw65 subnet=subnet65 cidr=10.2.65.0/24 flavor=m1.medium floating_ip=false
-cli63 nw=nw65 subnet=subnet65 cidr=10.2.65.0/24 flavor=ps.small floating_ip=false
+cli63 nw=nw65 subnet=subnet65 cidr=10.2.65.0/24 flavor=m1.medium floating_ip=false
 
 [nw66]
 eb64 nw=nw66 subnet=subnet66 cidr=10.2.66.0/24 flavor=m1.medium floating_ip=false
-cli64 nw=nw66 subnet=subnet66 cidr=10.2.66.0/24 flavor=ps.small floating_ip=false
+cli64 nw=nw66 subnet=subnet66 cidr=10.2.66.0/24 flavor=m1.medium floating_ip=false
 
 [nw67]
 eb65 nw=nw67 subnet=subnet67 cidr=10.2.67.0/24 flavor=m1.medium floating_ip=false
-cli65 nw=nw67 subnet=subnet67 cidr=10.2.67.0/24 flavor=ps.small floating_ip=false
+cli65 nw=nw67 subnet=subnet67 cidr=10.2.67.0/24 flavor=m1.medium floating_ip=false
 
 [nw68]
 eb66 nw=nw68 subnet=subnet68 cidr=10.2.68.0/24 flavor=m1.medium floating_ip=false
-cli66 nw=nw68 subnet=subnet68 cidr=10.2.68.0/24 flavor=ps.small floating_ip=false
+cli66 nw=nw68 subnet=subnet68 cidr=10.2.68.0/24 flavor=m1.medium floating_ip=false
 
 [nw69]
 eb67 nw=nw69 subnet=subnet69 cidr=10.2.69.0/24 flavor=m1.medium floating_ip=false
-cli67 nw=nw69 subnet=subnet69 cidr=10.2.69.0/24 flavor=ps.small floating_ip=false
+cli67 nw=nw69 subnet=subnet69 cidr=10.2.69.0/24 flavor=m1.medium floating_ip=false
 
 [nw70]
 eb68 nw=nw70 subnet=subnet70 cidr=10.2.70.0/24 flavor=m1.medium floating_ip=false
-cli68 nw=nw70 subnet=subnet70 cidr=10.2.70.0/24 flavor=ps.small floating_ip=false
+cli68 nw=nw70 subnet=subnet70 cidr=10.2.70.0/24 flavor=m1.medium floating_ip=false
 
 [nw71]
 eb69 nw=nw71 subnet=subnet71 cidr=10.2.71.0/24 flavor=m1.medium floating_ip=false
-cli69 nw=nw71 subnet=subnet71 cidr=10.2.71.0/24 flavor=ps.small floating_ip=false
+cli69 nw=nw71 subnet=subnet71 cidr=10.2.71.0/24 flavor=m1.medium floating_ip=false
 
 [nw72]
 eb70 nw=nw72 subnet=subnet72 cidr=10.2.72.0/24 flavor=m1.medium floating_ip=false
-cli70 nw=nw72 subnet=subnet72 cidr=10.2.72.0/24 flavor=ps.small floating_ip=false
+cli70 nw=nw72 subnet=subnet72 cidr=10.2.72.0/24 flavor=m1.medium floating_ip=false
 
 [nw73]
 eb71 nw=nw73 subnet=subnet73 cidr=10.2.73.0/24 flavor=m1.medium floating_ip=false
-cli71 nw=nw73 subnet=subnet73 cidr=10.2.73.0/24 flavor=ps.small floating_ip=false
+cli71 nw=nw73 subnet=subnet73 cidr=10.2.73.0/24 flavor=m1.medium floating_ip=false
 
 [nw74]
 eb72 nw=nw74 subnet=subnet74 cidr=10.2.74.0/24 flavor=m1.medium floating_ip=false
-cli72 nw=nw74 subnet=subnet74 cidr=10.2.74.0/24 flavor=ps.small floating_ip=false
+cli72 nw=nw74 subnet=subnet74 cidr=10.2.74.0/24 flavor=m1.medium floating_ip=false
 
 [nw75]
 eb73 nw=nw75 subnet=subnet75 cidr=10.2.75.0/24 flavor=m1.medium floating_ip=false
-cli73 nw=nw75 subnet=subnet75 cidr=10.2.75.0/24 flavor=ps.small floating_ip=false
+cli73 nw=nw75 subnet=subnet75 cidr=10.2.75.0/24 flavor=m1.medium floating_ip=false
 
 [nw76]
 eb74 nw=nw76 subnet=subnet76 cidr=10.2.76.0/24 flavor=m1.medium floating_ip=false
-cli74 nw=nw76 subnet=subnet76 cidr=10.2.76.0/24 flavor=ps.small floating_ip=false
+cli74 nw=nw76 subnet=subnet76 cidr=10.2.76.0/24 flavor=m1.medium floating_ip=false
 
 [nw77]
 eb75 nw=nw77 subnet=subnet77 cidr=10.2.77.0/24 flavor=m1.medium floating_ip=false
-cli75 nw=nw77 subnet=subnet77 cidr=10.2.77.0/24 flavor=ps.small floating_ip=false
+cli75 nw=nw77 subnet=subnet77 cidr=10.2.77.0/24 flavor=m1.medium floating_ip=false
 
 [nw78]
 eb76 nw=nw78 subnet=subnet78 cidr=10.2.78.0/24 flavor=m1.medium floating_ip=false
-cli76 nw=nw78 subnet=subnet78 cidr=10.2.78.0/24 flavor=ps.small floating_ip=false
+cli76 nw=nw78 subnet=subnet78 cidr=10.2.78.0/24 flavor=m1.medium floating_ip=false
 
 [nw79]
 eb77 nw=nw79 subnet=subnet79 cidr=10.2.79.0/24 flavor=m1.medium floating_ip=false
-cli77 nw=nw79 subnet=subnet79 cidr=10.2.79.0/24 flavor=ps.small floating_ip=false
+cli77 nw=nw79 subnet=subnet79 cidr=10.2.79.0/24 flavor=m1.medium floating_ip=false
 
 [nw80]
 eb78 nw=nw80 subnet=subnet80 cidr=10.2.80.0/24 flavor=m1.medium floating_ip=false
-cli78 nw=nw80 subnet=subnet80 cidr=10.2.80.0/24 flavor=ps.small floating_ip=false
+cli78 nw=nw80 subnet=subnet80 cidr=10.2.80.0/24 flavor=m1.medium floating_ip=false
 
 [nw81]
 eb79 nw=nw81 subnet=subnet81 cidr=10.2.81.0/24 flavor=m1.medium floating_ip=false
-cli79 nw=nw81 subnet=subnet81 cidr=10.2.81.0/24 flavor=ps.small floating_ip=false
+cli79 nw=nw81 subnet=subnet81 cidr=10.2.81.0/24 flavor=m1.medium floating_ip=false
 
 [nw82]
 eb80 nw=nw82 subnet=subnet82 cidr=10.2.82.0/24 flavor=m1.medium floating_ip=false
-cli80 nw=nw82 subnet=subnet82 cidr=10.2.82.0/24 flavor=ps.small floating_ip=false
+cli80 nw=nw82 subnet=subnet82 cidr=10.2.82.0/24 flavor=m1.medium floating_ip=false
 
 [nw83]
 eb81 nw=nw83 subnet=subnet83 cidr=10.2.83.0/24 flavor=m1.medium floating_ip=false
-cli81 nw=nw83 subnet=subnet83 cidr=10.2.83.0/24 flavor=ps.small floating_ip=false
+cli81 nw=nw83 subnet=subnet83 cidr=10.2.83.0/24 flavor=m1.medium floating_ip=false
 
 [nw84]
 eb82 nw=nw84 subnet=subnet84 cidr=10.2.84.0/24 flavor=m1.medium floating_ip=false
-cli82 nw=nw84 subnet=subnet84 cidr=10.2.84.0/24 flavor=ps.small floating_ip=false
+cli82 nw=nw84 subnet=subnet84 cidr=10.2.84.0/24 flavor=m1.medium floating_ip=false
 
 [nw85]
 eb83 nw=nw85 subnet=subnet85 cidr=10.2.85.0/24 flavor=m1.medium floating_ip=false
-cli83 nw=nw85 subnet=subnet85 cidr=10.2.85.0/24 flavor=ps.small floating_ip=false
+cli83 nw=nw85 subnet=subnet85 cidr=10.2.85.0/24 flavor=m1.medium floating_ip=false
 
 [nw86]
 eb84 nw=nw86 subnet=subnet86 cidr=10.2.86.0/24 flavor=m1.medium floating_ip=false
-cli84 nw=nw86 subnet=subnet86 cidr=10.2.86.0/24 flavor=ps.small floating_ip=false
+cli84 nw=nw86 subnet=subnet86 cidr=10.2.86.0/24 flavor=m1.medium floating_ip=false
 
 [nw87]
 eb85 nw=nw87 subnet=subnet87 cidr=10.2.87.0/24 flavor=m1.medium floating_ip=false
-cli85 nw=nw87 subnet=subnet87 cidr=10.2.87.0/24 flavor=ps.small floating_ip=false
+cli85 nw=nw87 subnet=subnet87 cidr=10.2.87.0/24 flavor=m1.medium floating_ip=false
 
 [nw88]
 eb86 nw=nw88 subnet=subnet88 cidr=10.2.88.0/24 flavor=m1.medium floating_ip=false
-cli86 nw=nw88 subnet=subnet88 cidr=10.2.88.0/24 flavor=ps.small floating_ip=false
+cli86 nw=nw88 subnet=subnet88 cidr=10.2.88.0/24 flavor=m1.medium floating_ip=false
 
 [nw89]
 eb87 nw=nw89 subnet=subnet89 cidr=10.2.89.0/24 flavor=m1.medium floating_ip=false
-cli87 nw=nw89 subnet=subnet89 cidr=10.2.89.0/24 flavor=ps.small floating_ip=false
+cli87 nw=nw89 subnet=subnet89 cidr=10.2.89.0/24 flavor=m1.medium floating_ip=false
 
 [nw90]
 eb88 nw=nw90 subnet=subnet90 cidr=10.2.90.0/24 flavor=m1.medium floating_ip=false
-cli88 nw=nw90 subnet=subnet90 cidr=10.2.90.0/24 flavor=ps.small floating_ip=false
+cli88 nw=nw90 subnet=subnet90 cidr=10.2.90.0/24 flavor=m1.medium floating_ip=false
 
 [nw91]
 eb89 nw=nw91 subnet=subnet91 cidr=10.2.91.0/24 flavor=m1.medium floating_ip=false
-cli89 nw=nw91 subnet=subnet91 cidr=10.2.91.0/24 flavor=ps.small floating_ip=false
+cli89 nw=nw91 subnet=subnet91 cidr=10.2.91.0/24 flavor=m1.medium floating_ip=false
 
 [nw92]
 eb90 nw=nw92 subnet=subnet92 cidr=10.2.92.0/24 flavor=m1.medium floating_ip=false
-cli90 nw=nw92 subnet=subnet92 cidr=10.2.92.0/24 flavor=ps.small floating_ip=false
+cli90 nw=nw92 subnet=subnet92 cidr=10.2.92.0/24 flavor=m1.medium floating_ip=false
 
 [nw93]
 eb91 nw=nw93 subnet=subnet93 cidr=10.2.93.0/24 flavor=m1.medium floating_ip=false
-cli91 nw=nw93 subnet=subnet93 cidr=10.2.93.0/24 flavor=ps.small floating_ip=false
+cli91 nw=nw93 subnet=subnet93 cidr=10.2.93.0/24 flavor=m1.medium floating_ip=false
 
 [nw94]
 eb92 nw=nw94 subnet=subnet94 cidr=10.2.94.0/24 flavor=m1.medium floating_ip=false
-cli92 nw=nw94 subnet=subnet94 cidr=10.2.94.0/24 flavor=ps.small floating_ip=false
+cli92 nw=nw94 subnet=subnet94 cidr=10.2.94.0/24 flavor=m1.medium floating_ip=false
 
 [nw95]
 eb93 nw=nw95 subnet=subnet95 cidr=10.2.95.0/24 flavor=m1.medium floating_ip=false
-cli93 nw=nw95 subnet=subnet95 cidr=10.2.95.0/24 flavor=ps.small floating_ip=false
+cli93 nw=nw95 subnet=subnet95 cidr=10.2.95.0/24 flavor=m1.medium floating_ip=false
 
 [nw96]
 eb94 nw=nw96 subnet=subnet96 cidr=10.2.96.0/24 flavor=m1.medium floating_ip=false
-cli94 nw=nw96 subnet=subnet96 cidr=10.2.96.0/24 flavor=ps.small floating_ip=false
+cli94 nw=nw96 subnet=subnet96 cidr=10.2.96.0/24 flavor=m1.medium floating_ip=false
 
 [nw97]
 eb95 nw=nw97 subnet=subnet97 cidr=10.2.97.0/24 flavor=m1.medium floating_ip=false
-cli95 nw=nw97 subnet=subnet97 cidr=10.2.97.0/24 flavor=ps.small floating_ip=false
+cli95 nw=nw97 subnet=subnet97 cidr=10.2.97.0/24 flavor=m1.medium floating_ip=false
 
 [nw98]
 eb96 nw=nw98 subnet=subnet98 cidr=10.2.98.0/24 flavor=m1.medium floating_ip=false
-cli96 nw=nw98 subnet=subnet98 cidr=10.2.98.0/24 flavor=ps.small floating_ip=false
+cli96 nw=nw98 subnet=subnet98 cidr=10.2.98.0/24 flavor=m1.medium floating_ip=false
 
 [nw99]
 eb97 nw=nw99 subnet=subnet99 cidr=10.2.99.0/24 flavor=m1.medium floating_ip=false
-cli97 nw=nw99 subnet=subnet99 cidr=10.2.99.0/24 flavor=ps.small floating_ip=false
+cli97 nw=nw99 subnet=subnet99 cidr=10.2.99.0/24 flavor=m1.medium floating_ip=false
 
 [nw100]
 eb98 nw=nw100 subnet=subnet100 cidr=10.2.100.0/24 flavor=m1.medium floating_ip=false
-cli98 nw=nw100 subnet=subnet100 cidr=10.2.100.0/24 flavor=ps.small floating_ip=false
+cli98 nw=nw100 subnet=subnet100 cidr=10.2.100.0/24 flavor=m1.medium floating_ip=false
 
 [nw101]
 eb99 nw=nw101 subnet=subnet101 cidr=10.2.101.0/24 flavor=m1.medium floating_ip=false
-cli99 nw=nw101 subnet=subnet101 cidr=10.2.101.0/24 flavor=ps.small floating_ip=false
+cli99 nw=nw101 subnet=subnet101 cidr=10.2.101.0/24 flavor=m1.medium floating_ip=false
 
 [nw102]
 eb100 nw=nw102 subnet=subnet102 cidr=10.2.102.0/24 flavor=m1.medium floating_ip=false
-cli100 nw=nw102 subnet=subnet102 cidr=10.2.102.0/24 flavor=ps.small floating_ip=false
+cli100 nw=nw102 subnet=subnet102 cidr=10.2.102.0/24 flavor=m1.medium floating_ip=false
 
 [nw103]
 eb101 nw=nw103 subnet=subnet103 cidr=10.2.103.0/24 flavor=m1.medium floating_ip=false
-cli101 nw=nw103 subnet=subnet103 cidr=10.2.103.0/24 flavor=ps.small floating_ip=false
+cli101 nw=nw103 subnet=subnet103 cidr=10.2.103.0/24 flavor=m1.medium floating_ip=false
 
 [nw104]
 eb102 nw=nw104 subnet=subnet104 cidr=10.2.104.0/24 flavor=m1.medium floating_ip=false
-cli102 nw=nw104 subnet=subnet104 cidr=10.2.104.0/24 flavor=ps.small floating_ip=false
+cli102 nw=nw104 subnet=subnet104 cidr=10.2.104.0/24 flavor=m1.medium floating_ip=false
 
 [nw105]
 eb103 nw=nw105 subnet=subnet105 cidr=10.2.105.0/24 flavor=m1.medium floating_ip=false
-cli103 nw=nw105 subnet=subnet105 cidr=10.2.105.0/24 flavor=ps.small floating_ip=false
+cli103 nw=nw105 subnet=subnet105 cidr=10.2.105.0/24 flavor=m1.medium floating_ip=false
 
 [nw106]
 eb104 nw=nw106 subnet=subnet106 cidr=10.2.106.0/24 flavor=m1.medium floating_ip=false
-cli104 nw=nw106 subnet=subnet106 cidr=10.2.106.0/24 flavor=ps.small floating_ip=false
+cli104 nw=nw106 subnet=subnet106 cidr=10.2.106.0/24 flavor=m1.medium floating_ip=false
 
 [nw107]
 eb105 nw=nw107 subnet=subnet107 cidr=10.2.107.0/24 flavor=m1.medium floating_ip=false
-cli105 nw=nw107 subnet=subnet107 cidr=10.2.107.0/24 flavor=ps.small floating_ip=false
+cli105 nw=nw107 subnet=subnet107 cidr=10.2.107.0/24 flavor=m1.medium floating_ip=false
 
 [nw108]
 eb106 nw=nw108 subnet=subnet108 cidr=10.2.108.0/24 flavor=m1.medium floating_ip=false
-cli106 nw=nw108 subnet=subnet108 cidr=10.2.108.0/24 flavor=ps.small floating_ip=false
+cli106 nw=nw108 subnet=subnet108 cidr=10.2.108.0/24 flavor=m1.medium floating_ip=false
 
 [nw109]
 eb107 nw=nw109 subnet=subnet109 cidr=10.2.109.0/24 flavor=m1.medium floating_ip=false
-cli107 nw=nw109 subnet=subnet109 cidr=10.2.109.0/24 flavor=ps.small floating_ip=false
+cli107 nw=nw109 subnet=subnet109 cidr=10.2.109.0/24 flavor=m1.medium floating_ip=false
 
 [nw110]
 eb108 nw=nw110 subnet=subnet110 cidr=10.2.110.0/24 flavor=m1.medium floating_ip=false
-cli108 nw=nw110 subnet=subnet110 cidr=10.2.110.0/24 flavor=ps.small floating_ip=false
+cli108 nw=nw110 subnet=subnet110 cidr=10.2.110.0/24 flavor=m1.medium floating_ip=false
 
 [nw111]
 eb109 nw=nw111 subnet=subnet111 cidr=10.2.111.0/24 flavor=m1.medium floating_ip=false
-cli109 nw=nw111 subnet=subnet111 cidr=10.2.111.0/24 flavor=ps.small floating_ip=false
+cli109 nw=nw111 subnet=subnet111 cidr=10.2.111.0/24 flavor=m1.medium floating_ip=false
 
 [nw112]
 eb110 nw=nw112 subnet=subnet112 cidr=10.2.112.0/24 flavor=m1.medium floating_ip=false
-cli110 nw=nw112 subnet=subnet112 cidr=10.2.112.0/24 flavor=ps.small floating_ip=false
+cli110 nw=nw112 subnet=subnet112 cidr=10.2.112.0/24 flavor=m1.medium floating_ip=false
 
 [nw113]
 eb111 nw=nw113 subnet=subnet113 cidr=10.2.113.0/24 flavor=m1.medium floating_ip=false
-cli111 nw=nw113 subnet=subnet113 cidr=10.2.113.0/24 flavor=ps.small floating_ip=false
+cli111 nw=nw113 subnet=subnet113 cidr=10.2.113.0/24 flavor=m1.medium floating_ip=false
 
 [nw114]
 eb112 nw=nw114 subnet=subnet114 cidr=10.2.114.0/24 flavor=m1.medium floating_ip=false
-cli112 nw=nw114 subnet=subnet114 cidr=10.2.114.0/24 flavor=ps.small floating_ip=false
+cli112 nw=nw114 subnet=subnet114 cidr=10.2.114.0/24 flavor=m1.medium floating_ip=false
 
 [nw115]
 eb113 nw=nw115 subnet=subnet115 cidr=10.2.115.0/24 flavor=m1.medium floating_ip=false
-cli113 nw=nw115 subnet=subnet115 cidr=10.2.115.0/24 flavor=ps.small floating_ip=false
+cli113 nw=nw115 subnet=subnet115 cidr=10.2.115.0/24 flavor=m1.medium floating_ip=false
 
 [nw116]
 eb114 nw=nw116 subnet=subnet116 cidr=10.2.116.0/24 flavor=m1.medium floating_ip=false
-cli114 nw=nw116 subnet=subnet116 cidr=10.2.116.0/24 flavor=ps.small floating_ip=false
+cli114 nw=nw116 subnet=subnet116 cidr=10.2.116.0/24 flavor=m1.medium floating_ip=false
 
 [nw117]
 eb115 nw=nw117 subnet=subnet117 cidr=10.2.117.0/24 flavor=m1.medium floating_ip=false
-cli115 nw=nw117 subnet=subnet117 cidr=10.2.117.0/24 flavor=ps.small floating_ip=false
+cli115 nw=nw117 subnet=subnet117 cidr=10.2.117.0/24 flavor=m1.medium floating_ip=false
 
 [nw118]
 eb116 nw=nw118 subnet=subnet118 cidr=10.2.118.0/24 flavor=m1.medium floating_ip=false
-cli116 nw=nw118 subnet=subnet118 cidr=10.2.118.0/24 flavor=ps.small floating_ip=false
+cli116 nw=nw118 subnet=subnet118 cidr=10.2.118.0/24 flavor=m1.medium floating_ip=false
 
 [nw119]
 eb117 nw=nw119 subnet=subnet119 cidr=10.2.119.0/24 flavor=m1.medium floating_ip=false
-cli117 nw=nw119 subnet=subnet119 cidr=10.2.119.0/24 flavor=ps.small floating_ip=false
+cli117 nw=nw119 subnet=subnet119 cidr=10.2.119.0/24 flavor=m1.medium floating_ip=false
 
 [nw120]
 eb118 nw=nw120 subnet=subnet120 cidr=10.2.120.0/24 flavor=m1.medium floating_ip=false
-cli118 nw=nw120 subnet=subnet120 cidr=10.2.120.0/24 flavor=ps.small floating_ip=false
+cli118 nw=nw120 subnet=subnet120 cidr=10.2.120.0/24 flavor=m1.medium floating_ip=false
 
 [openstack_instances:children]
 nw1

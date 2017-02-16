@@ -1,3 +1,4 @@
 *.retry
 openstack_rc/
 lib/
+logs/

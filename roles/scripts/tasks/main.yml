@@ -27,6 +27,10 @@
   shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/start_rb.sh "{{ zk_connector }}" "{{ emulated_broker }}"
   when: action == "start_rb"
 
+- name: start monitoring process 
+  shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/start_monitor.sh "{{ broker_type }}" "{{ log_dir }}" "{{ run_id }}" "{{ zk_connector }}" 
+  when: action == "start_monitor"
+
 - name: start subscriber process
   shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/start_subscribers.sh "{{ subscriber_count }}" 
     "{{ subscriber_domain }}" "{{ topic }}" "{{ type }}" "{{ sample_count }}" "{{ log_dir }}" "{{ run_id }}" "{{ zk_connector }}" 
@@ -38,5 +42,5 @@
   when: action == "start_pub"
 
 - name: copy remote files
-  synchronize: src=/home/ubuntu/log/1/ dest=logs/1/ mode=pull
+  synchronize: src=/home/ubuntu/log/{{ run_id }}/ dest=logs/{{ run_id }} mode=pull
   when: action == "fetch"
