@@ -3,11 +3,14 @@ master nw=nw1 subnet=subnet1 cidr=10.2.1.0/24 flavor=m1.large floating_ip=true
 zk1 nw=nw1 subnet=subnet1 cidr=10.2.1.0/24 flavor=m1.large floating_ip=true
 
 [nw2]
-rb1 nw=nw2 subnet=subnet2 cidr=10.2.2.0/24 flavor=m1.large floating_ip=false
+rb1 nw=nw2 subnet=subnet2 cidr=10.2.2.0/24 flavor=m1.medium floating_ip=false
+rb2 nw=nw2 subnet=subnet2 cidr=10.2.2.0/24 flavor=m1.medium floating_ip=false
 
 [nw3]
 eb1 nw=nw3 subnet=subnet3 cidr=10.2.3.0/24 flavor=m1.medium floating_ip=false 
 cli1 nw=nw3 subnet=subnet3 cidr=10.2.3.0/24 flavor=m1.medium floating_ip=false 
+cli1-2 nw=nw3 subnet=subnet3 cidr=10.2.3.0/24 flavor=m1.medium floating_ip=false 
+cli1-3 nw=nw3 subnet=subnet3 cidr=10.2.3.0/24 flavor=m1.medium floating_ip=false 
 
 [nw4]
 eb2 nw=nw4 subnet=subnet4 cidr=10.2.4.0/24 flavor=m1.medium floating_ip=false 

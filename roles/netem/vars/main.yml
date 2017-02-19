@@ -1,0 +1,3 @@
+---
+client_netem_script: /home/ubuntu/workspace/pubsubCoord/scripts/netem_client.sh
+rb_netem_script: /home/ubuntu/workspace/pubsubCoord/scripts/netem_rb.sh

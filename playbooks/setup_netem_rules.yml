@@ -1,0 +1,10 @@
+---
+- hosts: clients
+  become: yes
+  roles:
+    - { role: netem, mode: client }
+
+- hosts: routing_brokers
+  become: yes
+  roles: 
+    - { role: netem, mode: rb }

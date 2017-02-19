@@ -1,0 +1,16 @@
+---
+- name: delete previous outgoing rules
+  shell: tc qdisc del dev eth0 root
+  ignore_errors: true
+
+- name: delete previous incoming rules
+  shell: tc qdisc del dev ifb0 root
+  ignore_errors: true
+
+- name: setup client netem rules
+  shell: . "{{ client_netem_script }}"
+  when: mode is defined and mode == "client"
+
+- name: setup rb netem rules
+  shell: . "{{ rb_netem_script }}" 
+  when: mode is defined and mode == "rb" 

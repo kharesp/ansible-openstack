@@ -8,7 +8,7 @@ master ansible_ssh_host=10.2.1.14
 eb[1:118]
 
 [routing_brokers]
-rb1
+rb[1:2]
 
 [clients]
 cli[1:118]

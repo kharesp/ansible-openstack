@@ -7,3 +7,4 @@
 
 - include: update_ssh_hosts_file.yml
 - include: setup_nfs_clients.yml
+- include: setup_netem_rules.yml
