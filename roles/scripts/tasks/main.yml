@@ -15,6 +15,10 @@
   include: ptpd.yml
   when: action == "start_ptpd"
  
+- name: clean shmem and sem 
+  shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/ipcsrm.sh 
+  when: action == "ipcsrm"
+
 - name: start routing service
   shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/start_rs.sh 
   when: action == "start_rs"
@@ -44,3 +48,4 @@
 - name: copy remote files
   synchronize: src=/home/ubuntu/log/{{ run_id }}/ dest=logs/{{ run_id }} mode=pull
   when: action == "fetch"
+  ignore_errors: true
