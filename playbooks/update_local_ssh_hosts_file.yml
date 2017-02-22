@@ -1,0 +1,39 @@
+---
+- hosts: localhost 
+  connection: local
+  become: yes
+  tasks: 
+    - name: remove previous hostname ip binding 
+      lineinfile:
+        dest: /etc/hosts
+        regexp: '^10.2.'
+        state: absent 
+
+- hosts: openstack_instances
+  connection: local
+  tasks:
+    - name: gather facts
+      os_server_facts:
+        server: "{{ inventory_hostname }}"
+      register: res
+    - name: set ansible_ssh_host 
+      set_fact: ansible_ssh_host={{ res['ansible_facts']['openstack_servers'][0]['private_v4'] }}
+
+- hosts: localhost 
+  connection: local
+  become: yes
+  tasks:
+    - name: print out debug msg
+      debug: "msg='{{ hostvars[item]['ansible_ssh_host'] }} {{ item }}'"
+      when: hostvars[item]['ansible_ssh_host'] is defined
+      with_items: groups['openstack_instances']
+      ignore_errors: true
+    - name: update local /etc/hosts file
+      lineinfile: 
+        dest: /etc/hosts
+        regexp: '.*{{ item }}$' 
+        line: "{{ hostvars[item]['ansible_ssh_host'] }} {{ item }}"
+        state: present
+      when: hostvars[item]['ansible_ssh_host'] is defined
+      with_items: groups['openstack_instances']
+
