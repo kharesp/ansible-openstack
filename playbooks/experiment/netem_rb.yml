@@ -1,0 +1,12 @@
+---
+- include: set_ansible_ssh_host.yml
+
+- hosts: all
+  gather_facts: False
+  vars:
+    - bashrc: /home/ubuntu/.profile
+    - src_home: /home/ubuntu/workspace/pubsubCoord 
+  tasks:
+  - name: setup netem rules on rbs 
+    become: yes
+    shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/netem_rb.sh 

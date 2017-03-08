@@ -1,0 +1,17 @@
+---
+- include: set_ansible_ssh_host.yml
+
+- hosts: all
+  gather_facts: False
+  vars:
+    - bashrc: /home/ubuntu/.profile
+    - src_home: /home/ubuntu/workspace/pubsubCoord
+    - zk_connector: 10.2.1.15:2181 
+  tasks:
+    - name: check if rb is running
+      shell: ps aux | grep RoutingBroker | grep -v grep
+      register: plist
+      failed_when: plist.rc > 1
+    - name: start routing broker
+      shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/start_rb.sh "{{ zk_connector }}" "{{ emulated_broker }}"
+      when: "plist.stdout.find('RoutingBroker') == -1"  

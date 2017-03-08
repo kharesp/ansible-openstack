@@ -1,0 +1,17 @@
+---
+- include: set_ansible_ssh_host.yml
+
+- hosts: all
+  gather_facts: False
+  vars:
+    - bashrc: /home/ubuntu/.profile
+    - src_home: /home/ubuntu/workspace/pubsubCoord
+    - publisher_domain: 0
+    - type: DataSample_64B
+    - log_dir: /home/ubuntu/log
+    - zk_connector: 10.2.1.15:2181 
+  tasks: 
+    - name: start publisher process
+      shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/start_publishers.sh "{{ item.value }}"
+        "{{ publisher_domain }}" "{{ item.key }}" "{{ type }}" "{{ sample_count }}" "{{ sleep_interval }}" "{{ run_id }}" "{{ zk_connector }}"
+      with_dict: "{{ topic_count_map }}"

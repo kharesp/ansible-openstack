@@ -2,18 +2,18 @@
 zk1
 
 [nfs_server]
-master ansible_ssh_host=10.2.1.14
+master ansible_ssh_host=10.2.1.18
 
 [edge_brokers]
-eb[1:118]
+eb[1:20]
 
 [routing_brokers]
-rb[1:2]
+rb[1:10]
 
 [clients]
-cli[1:118]
+cli[1:20]-[1:10]
 
 [nfs_clients]
-rb1
-eb[1:118]
-cli[1:118]
+rb[1:5]
+eb[1:20]
+cli[1:20]-[1:10]

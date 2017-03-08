@@ -19,6 +19,16 @@
   shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/ipcsrm.sh 
   when: action == "ipcsrm"
 
+- name: setup netem rules on clients 
+  become: yes
+  shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/netem_client.sh 
+  when: action == "netem_client"
+
+- name: setup netem rules on rbs 
+  become: yes
+  shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/netem_rb.sh 
+  when: action == "netem_rb"
+
 - name: start routing service
   shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/start_rs.sh 
   when: action == "start_rs"
@@ -49,3 +59,13 @@
   synchronize: src=/home/ubuntu/log/{{ run_id }}/ dest=logs/{{ run_id }} mode=pull
   when: action == "fetch"
   ignore_errors: true
+
+- name: debug messaging 
+  shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/test.sh 
+  when: action == "debug"
+  register: result
+  changed_when: False
+
+- name: print debug message
+  debug: var=result.stdout_lines 
+  when: action == "debug"
