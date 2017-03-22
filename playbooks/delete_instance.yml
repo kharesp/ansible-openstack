@@ -1,0 +1,9 @@
+---
+- hosts: openstack_instances
+  connection: local
+  gather_facts: false
+  tasks:
+    - name: delete vm
+      os_server:
+        name: "{{ inventory_hostname }}"
+        state: absent
