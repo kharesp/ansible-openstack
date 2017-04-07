@@ -24,6 +24,7 @@
     flavor: "{{ flavor }}" 
     security_groups: "{{ security_groups }}" 
     auto_floating_ip: false
+    availability_zone: "{{ availability_zone }}"
     nics: 
       - net-name: "{{ nw }}"
   register: vm_info

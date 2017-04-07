@@ -1,5 +1,11 @@
 ---
 - hosts: openstack_instances
+  connection: local
+  gather_facts: false
+  roles:
+    - openstack_instances
+
+- hosts: openstack_instances
   become: yes
   tasks: 
     - name: remove previous hostname ip binding 

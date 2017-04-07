@@ -9,7 +9,6 @@
     - publisher_domain: 0
     - type: DataSample_64B
     - log_dir: /home/ubuntu/log
-    - zk_connector: 10.2.1.15:2181 
   tasks: 
     - name: start publisher process
       shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/start_publishers.sh "{{ item.value }}"

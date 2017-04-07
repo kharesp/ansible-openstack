@@ -6,7 +6,6 @@
   vars:
     - bashrc: /home/ubuntu/.profile
     - src_home: /home/ubuntu/workspace/pubsubCoord
-    - zk_connector: 10.2.1.15:2181 
   tasks:
     - name: check if eb is running
       shell: ps aux | grep EdgeBroker | grep -v grep

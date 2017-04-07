@@ -1,9 +1,0 @@
----
-- hosts: openstack_instances
-  connection: local
-  gather_facts: false
-  roles:
-    - openstack_instances
-
-- include: update_ssh_hosts_file.yml
-- include: setup_nfs_clients.yml

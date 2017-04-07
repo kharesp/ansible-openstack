@@ -1,0 +1,9 @@
+---
+- name: check if sysstat is installed
+  shell: which sadf
+  register: res
+  failed_when: res.rc==2
+  
+  
+- include: install.yml
+  when: res.rc==1

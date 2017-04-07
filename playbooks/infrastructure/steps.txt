@@ -1,0 +1,9 @@
+#Setting up infrastructure:
+provision VMs with: provision_os_instances.yml
+update local /etc/hosts with: update_local_ssh_hosts_file.yml
+mount NFS directory: setup_nfs_clients.yml
+install sysstat on brokers with: install_sysstat.yml
+setup netem with: setup_netem_rules.yml
+
+#Tearing down infrastructure:
+Decommission VMs with: delete_instance.yml

@@ -1,0 +1,21 @@
+---
+- name: update apt cache
+  apt: update_cache=yes
+
+- name: install sysstat
+  apt: pkg=sysstat state=present 
+
+- name: enable sysstat collection
+  lineinfile:
+    dest: /etc/default/sysstat
+    regexp: '^ENABLED='
+    line: 'ENABLED="true"'
+
+- name: setup cron job 
+  lineinfile:
+    dest: /etc/cron.d/sysstat 
+    regexp: '^5-55'
+    line: '*/1 * * * * root command -v debian-sa1 > /dev/null && debian-sa1 1 60'
+
+- name: restart sysstat service
+  service: name=sysstat state=restarted enabled=yes
