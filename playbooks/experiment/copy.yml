@@ -9,3 +9,6 @@
     - name: copy remote files
       synchronize: src=/home/ubuntu/log/{{ run_id }}/ dest={{ ansible_dir }}/logs/{{ run_id }} mode=pull
       ignore_errors: true
+    - name: copy queueing files
+      synchronize: src=/home/ubuntu/log/queueing/ dest={{ ansible_dir }}/logs/{{ run_id }} mode=pull
+      ignore_errors: true

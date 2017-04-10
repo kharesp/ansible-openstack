@@ -7,12 +7,12 @@
     - bashrc: /home/ubuntu/.profile
     - src_home: /home/ubuntu/workspace/pubsubCoord 
   tasks:
-    - name: will wait for sometime before checking if rs is running
-      wait_for: timeout=30
+    #- name: will wait for sometime before checking if rs is running
+    #  wait_for: timeout=30
     - name: check if rs is running
-      shell: ps aux | grep rtiroutingservice | grep -v grep
+      shell: ps aux | grep RoutingService | grep -v grep
       register: plist
       failed_when: plist.rc > 1
     - name: start routing service
       shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/start_rs.sh 
-      when: "plist.stdout.find('rtiroutingservice') == -1"
+      when: "plist.stdout.find('RoutingService') == -1"
