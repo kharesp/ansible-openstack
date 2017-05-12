@@ -1,0 +1,13 @@
+---
+- include: set_ansible_ssh_host.yml
+
+- hosts: all
+  gather_facts: False
+  vars:
+    - bashrc: /home/ubuntu/.profile
+    - src_home: /home/ubuntu/workspace/pubsubCoord 
+  tasks: 
+  - name: delete netem rules 
+    become: yes
+    shell: . "{{ bashrc }}" && cd "{{ src_home }}" && ./scripts/delete_netem.sh 
+    ignore_errors: True

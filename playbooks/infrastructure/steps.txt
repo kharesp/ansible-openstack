@@ -4,6 +4,7 @@ update local /etc/hosts with: update_local_ssh_hosts_file.yml
 mount NFS directory: setup_nfs_clients.yml
 install sysstat on brokers with: install_sysstat.yml
 setup netem with: setup_netem_rules.yml
+force time synchronization of all hosts with master: synchronize.yml
 
 #Tearing down infrastructure:
 Decommission VMs with: delete_instance.yml

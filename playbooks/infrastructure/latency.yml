@@ -1,0 +1,18 @@
+---
+- include: set_ansible_ssh_host.yml
+
+- hosts: openstack_instances
+  serial: 1
+  vars:
+    - ping: /home/ubuntu/ping.log
+    - log: /home/kharesp/workspace/ansible/pubsubCoord/latency.csv
+  tasks:
+    - name: get ping stats 
+      shell: tail -1 {{ ping }} | awk -F'[/|/]' '{print $5}'
+      register: result
+    - name: log avg latency
+      lineinfile:
+        line: "{{ inventory_hostname }},{{ result.stdout }}"
+        insertafter: EOF
+        dest: "{{ log }}" 
+      delegate_to: 127.0.0.1

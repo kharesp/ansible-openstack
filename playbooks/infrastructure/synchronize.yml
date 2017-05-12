@@ -1,0 +1,8 @@
+---
+- include: set_ansible_ssh_host.yml
+
+- hosts: openstack_instances
+  become: yes
+  tasks:
+    - name: force synchronize time with master
+      shell: sntp -s "{{ master }}"
